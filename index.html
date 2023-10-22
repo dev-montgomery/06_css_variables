@@ -4,8 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Variables</title>
+  <style>
+    :root {
+      --max-width: 1100px;
+      --primary-color: steelblue;
+      --secondary-color: skyblue;
+      --light-color: #f4f4f4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      background: var(--light-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+
+    .box {
+      background-color: var(--light-color);
+      border-bottom: 5px solid var(--secondary-color);
+      border-top: 5px solid var(--secondary-color);
+      color: var(--primary-color);
+      padding: 1rem;
+      margin: 1rem;
+    }
+  </style>
 </head>
 <body>
-  
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde qui culpa sapiente minus nam iusto maiores reprehenderit ex quis labore?</p>
+    </div>
+    <div class="box box-2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde qui culpa sapiente minus nam iusto maiores reprehenderit ex quis labore?</p>
+    </div>
+  </div>
 </body>
 </html>
